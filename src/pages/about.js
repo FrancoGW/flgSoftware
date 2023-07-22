@@ -39,7 +39,7 @@ const AboutPage = () => {
             height="100vh"
             alignItems="center"
             justify="space-between"
-            direction={{base:'column'}}
+            direction={{base:'column',md:'row'}}
           >
             <Box flex="1">
               <Image

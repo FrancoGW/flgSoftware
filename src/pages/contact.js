@@ -57,7 +57,14 @@ const ContactPage = () => {
   return (
     <Box minHeight="100vh" display="flex" flexDirection="column">
       <Header />
-      <Flex flex="1" justifyContent="center" alignItems="center" gap={{base:'2rem'}}padding={{base:'1rem'}}direction={{base:'column'}}>
+      <Flex
+        flex="1"
+        justifyContent="center"
+        alignItems="center"
+        gap={{ base: "2rem" }}
+        padding={{ base: "1rem" }}
+        direction={{ base: "column",md:'row' }}
+      >
         <Box
           maxWidth="500px"
           width="100%"
@@ -66,7 +73,12 @@ const ContactPage = () => {
           p={0}
           mt={6}
         >
-          <Heading as="h2" fontSize={{ base: "2rem", md: "3.5rem" }} mb={6} color="#000">
+          <Heading
+            as="h2"
+            fontSize={{ base: "2rem", md: "3.5rem" }}
+            mb={6}
+            color="#000"
+          >
             Let's chat. <br />
             Tell me about your <br /> project.
           </Heading>
@@ -81,8 +93,18 @@ const ContactPage = () => {
             marginTop="1rem"
             padding="1rem"
           >
-            <Icon as={AiOutlineMail} boxSize={30} color="#000" mr={2} display={{base:'none'}}/>
-            <Flex alignItems="center" gap=".2rem" direction={{base:'column'}}>
+            <Icon
+              as={AiOutlineMail}
+              boxSize={30}
+              color="#000"
+              mr={2}
+              display={{ base: "none" }}
+            />
+            <Flex
+              alignItems="center"
+              gap=".2rem"
+              direction={{ base: "column", md:'row' }}
+            >
               <Text color="#000" mr={2}>
                 Mail me at
               </Text>
@@ -111,9 +133,7 @@ const ContactPage = () => {
               <Box fontSize="2xl" fontWeight="bold" mb={4}>
                 Gracias por contactarnos
               </Box>
-              <Box fontSize="lg">
-                Nos pondremos en contacto a la brevedad.
-              </Box>
+              <Box fontSize="lg">Nos pondremos en contacto a la brevedad.</Box>
             </Box>
           ) : (
             <form onSubmit={handleSubmit}>
